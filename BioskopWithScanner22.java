@@ -15,18 +15,23 @@ public class BioskopWithScanner22 {
             System.out.println("3. Exit");
             System.out.print("Pilih menu (1/2/3): ");
             int menu = sc.nextInt();
-            sc.nextLine(); // Membuang newline setelah nextInt()
+            sc.nextLine(); 
 
             switch (menu) {
                 case 1:
                     while (true) {
                         System.out.print("Masukkan nama: ");
                         nama = sc.nextLine();
-                        System.out.print("Masukkan baris: ");
+                        System.out.print("Masukkan baris (1-4): ");
                         baris = sc.nextInt();
-                        System.out.print("Masukkan kolom: ");
+                        System.out.print("Masukkan kolom (1-2): ");
                         kolom = sc.nextInt();
                         sc.nextLine();
+
+                        if (baris < 1 || baris > penonton.length || kolom < 1 || kolom > penonton[0].length) {
+                            System.out.println("Nomor baris atau kolom tidak tersedia. Silakan masukkan nomor yang sesuai.");
+                            continue;
+                        }
 
                         penonton[baris - 1][kolom - 1] = nama;
 
@@ -49,7 +54,7 @@ public class BioskopWithScanner22 {
                     }
                     break;
                 case 3:
-                    System.out.println("Terima kasih telah menggunakan layanan kami.");
+                    System.out.println("Terima kasih telah menggunakan program.");
                     System.exit(0);
                 default:
                     System.out.println("Pilihan tidak valid.");
