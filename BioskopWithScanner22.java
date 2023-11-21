@@ -15,7 +15,7 @@ public class BioskopWithScanner22 {
             System.out.println("3. Exit");
             System.out.print("Pilih menu (1/2/3): ");
             int menu = sc.nextInt();
-            sc.nextLine(); // Membuang newline setelah nextInt()
+            sc.nextLine(); 
 
             switch (menu) {
                 case 1:
@@ -59,7 +59,7 @@ public class BioskopWithScanner22 {
                                 System.out.print(" [" + penonton[i][j] + "] ");
                             }
                         }
-                        System.out.println(); // Pindah baris setiap selesai kolom
+                        System.out.println();
                     }
                     break;
                 case 3:
