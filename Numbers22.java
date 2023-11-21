@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Numbers22 {
     public static void main(String[] args) {
         int[][] myNumbers = new int[3][];
